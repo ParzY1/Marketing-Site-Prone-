@@ -64,10 +64,11 @@ body {
 
 /* Section Styles */
 .section {
+    margin-top: 80px;
     padding: 70px 50px;
     text-align: center;
     background-color: #161625;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .section h2 {
