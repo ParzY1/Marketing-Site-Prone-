@@ -286,7 +286,6 @@ body {
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
-    width: 100%;
     padding: 10px;
     font-size: 1em;
     color: #F9F6F2;
