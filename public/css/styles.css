@@ -92,7 +92,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 100px 50px;
+    padding: 20px 50px;
     background-color: #11111F;
 }
 
@@ -140,13 +140,50 @@ body {
     padding: 70px 50px;
     text-align: center;
     background-color: #161625;
-    margin-bottom: 40px; /* Dodano więcej miejsca pomiędzy sekcjami */
+    margin-bottom: 0px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 .section h2 {
     color: #F9F6F2;
     font-size: 2.5em;
     margin-bottom: 20px;
+    position: relative;
+}
+
+.animated-hr {
+    width: 0;
+    height: 2px;
+    background-color: #eaaa00;
+    margin: 10px auto;
+    border: none;
+    transition: width 0.6s ease;
+}
+
+.animated-hr.visible {
+    width: 100%;
+}
+
+.section p {
+    color: #A9A9B1;
+    font-size: 1.2em;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section p.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Sekcje jako "cards" */
@@ -201,70 +238,75 @@ body {
 /* Container for Flip Cards */
 .flip-card-container {
     display: flex;
-    justify-content: space-around;
-    gap: 30px;
-    padding: 50px 0;
+    height: 300px;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 25px 0;
 }
 
 /* Individual Flip Card */
 .flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 200px;
-    perspective: 1000px; /* Perspective for 3D effect */
-}
-
-/* Flip Card Inner Part */
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-
-/* Flip Card on Hover */
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-/* Flip Card Front and Back */
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    background-color: #161625;
+    width: 200px;
+    height: 100px;
     border-radius: 10px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    padding: 20px;
+    justify-content: center;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    justify-content: flex-start;
+    padding: 10px;
+    border-radius: 10%;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: opacity 0,6 ease-out, transform 0,6 ease-out;
 }
 
-.flip-card-front {
-    background-color: #161625;
-    color: #eaaa00;
+.flip-card.visible {
+    transform: translateY(0px);
+    opacity: 1;
 }
 
-.flip-card-back {
-    background-color: #1A1A28;
-    color: #F9F6F2;
-    transform: rotateY(180deg);
+.flip-card:hover {
+    height: 225px;
 }
 
 /* Text Styling */
 .flip-card h3 {
-    font-size: 1.8em;
+    font-size: 1.2em;
     font-weight: bold;
+    color: #eaaa00;
+    margin: 10px 0;
 }
 
-.flip-card p {
-    font-size: 1.2em;
-    line-height: 1.5;
+.flip-card img {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
+
+.flip-card .description {
+    line-height: 1.5;
+    font-size: 0.8em;
+    color: #F9F6F2;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    margin-top: 20px;
+}
+
+.flip-card:hover .description {
+    opacity: 1;
+    max-height: 200px;
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -354,4 +396,33 @@ body {
     .feature-box {
         width: 90%;
     }
+}
+
+.fade-in,
+.delayed-slide-in {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delayed-slide-in.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.8s;
+}
+
+.hero-image img.fade-in {
+    opacity: 0;
+    transform: none; 
+    transition: opacity 0.8s ease;
+}
+
+.hero-image img.fade-in.show {
+    opacity: 1;
+    transform: none;
 }
