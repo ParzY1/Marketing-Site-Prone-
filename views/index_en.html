@@ -12,7 +12,7 @@
     <!-- Navigation Bar -->
     <header class="navbar">
         <div class="logo">
-            <img src="/img/logo.png" alt="Prone Logo">
+            <img src="/img/logo.png" alt="Prone Logo" ondragstart="false" draggable="false">
         </div>
         <nav class="nav-links">
             <ul>
@@ -24,126 +24,101 @@
                     <a href="/blog/en">
                       Blog
                       <div class="nav-icon-container">
-                        <img src="/img/icons/external3.png" alt="External Link Icon" class="nav-external-icon">
+                        <img src="../img/icons/external3.png" alt="External Link Icon" class="nav-external-icon">
                       </div>
                     </a>
                   </li>
-                  
             </ul>
         </nav>
         <div class="language-switch">
-            <a href="/en"><img src="/img/flags/uk.png" alt="English"></a>
-            <a href="/pl"><img src="/img/flags/pl.png" alt="Polski"></a>
+            <a href="/en"><img src="../img/flags/uk.png" alt="English"></a>
+            <a href="/pl"><img src="../img/flags/pl.png" alt="Polish"></a>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1><span class="highlight-prone">PRONE</span> – A Modern Cybersecurity Tool for Local Networks</h1>
-            <p>PRONE is an advanced software solution designed to manage and control network traffic within local environments, ensuring the highest level of cybersecurity.</p>
-            <a href="#offer" class="cta-btn">See PRONE's Offer</a>
+          <h1 class="fade-in"><span class="highlight-prone">PRONE</span> – Advanced cybersecurity tool for local networks</h1>
+          <p class="delayed-slide-in">PRONE is a sophisticated software solution for managing and monitoring local network traffic, designed to ensure maximum cybersecurity.</p>
+          <a href="#offer" class="cta-btn">See PRONE Offer</a>
         </div>
         <div class="hero-image">
-            <img src="/gifs/animation_3.gif" alt="PRONE Animation">
+          <img class="fade-in" src="../gifs/animation_3.gif" alt="PRONE Animation">
         </div>
-    </section>
+      </section>      
 
+    <!-- Why PRONE? -->
     <section id="why-prone" class="section card">
         <h2>Why PRONE?</h2>
-        <p>PRONE effectively blocks unwanted websites and restricts access to specific network resources, safeguarding your infrastructure from both external and internal threats.</p>
+        <hr class="animated-hr">
+        <p>PRONE effectively blocks unwanted websites and restricts access to specific network resources, protecting your infrastructure from both external and internal threats.</p>
+        <div class="key-features flip-card-container">
+            <div class="flip-card">
+                <img src="../img/icons/alternate-shield.svg" alt="Blocking Icon" />
+                <h3>Blocking Unwanted Websites</h3>
+                <p class="description">PRONE helps block access to sites and applications that may pose security risks.</p>
+            </div>
+    
+            <div class="flip-card">
+                <img src="../img/icons/connect.svg" alt="Traffic Analysis Icon" />
+                <h3>Network Traffic Analysis</h3>
+                <p class="description">PRONE provides real-time analysis of traffic in your local network to detect potential issues.</p>
+            </div>
+    
+            <div class="flip-card">
+                <img src="../img/icons/server.svg" alt="Rules Icon" />
+                <h3>Access Rule Management</h3>
+                <p class="description">Define and manage detailed access rules to protect your network resources.</p>
+            </div>
+    
+            <div class="flip-card">
+                <img src="../img/icons/system-management.svg" alt="Integration Icon" />
+                <h3>Easy Integration</h3>
+                <p class="description">Easily integrate PRONE with your existing security infrastructure.</p>
+            </div>
+        </div>
     </section>
     
     <section id="offer" class="section card">
         <h2>Offer</h2>
-        <p>PRONE offers comprehensive capabilities for monitoring network traffic, analyzing data, and detecting potential threats in real-time.</p>
+        <hr class="animated-hr">
+        <p>PRONE provides extensive capabilities for monitoring network traffic, analyzing data, and detecting potential threats in real time.</p>
     </section>
     
     <section id="blog" class="section card">
         <h2>Blog</h2>
-        <p>Explore more insights and updates about the latest trends in cybersecurity.</p>
+        <hr class="animated-hr">
+        <p>Read more about the latest trends in cybersecurity.</p>
     </section>
     
-
-    <!-- Key Features Section with Flexbox -->
-    <section id="key-features" class="key-features">
-        <div class="flip-card-container">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <!-- Front of the Card -->
-                    <div class="flip-card-front">
-                        <h3>Blocking Unwanted Websites</h3>
-                    </div>
-                    <!-- Back of the Card -->
-                    <div class="flip-card-back">
-                        <p>PRONE helps block access to websites and applications that may pose security risks.</p>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h3>Network Traffic Analysis</h3>
-                    </div>
-                    <div class="flip-card-back">
-                        <p>PRONE provides real-time analysis of your local network traffic to identify potential issues.</p>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h3>Access Rule Management</h3>
-                    </div>
-                    <div class="flip-card-back">
-                        <p>Define and manage detailed access policies to protect your network’s resources.</p>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h3>Easy Integration</h3>
-                    </div>
-                    <div class="flip-card-back">
-                        <p>Integrate PRONE seamlessly with your existing security infrastructure.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <section id="contact" class="section card">
         <h2>Contact</h2>
         <form action="/submit-form" method="POST" class="contact-form">
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-        
-            <label for="company">Company/Institution Name:</label>
-            <input type="text" id="company" name="company" placeholder="Enter the name of your company or institution">
-        
+    
+            <label for="company">Company/Organization Name:</label>
+            <input type="text" id="company" name="company" placeholder="Enter your company or organization name">
+    
             <label for="email">Email Address:</label>
             <input type="email" id="email" name="email" placeholder="Enter your email" required>
-        
-            <label for="subject">Choose a Subject:</label>
+    
+            <label for="subject">Subject:</label>
             <select id="subject" name="subject" required>
                 <option value="purchase">Purchase</option>
                 <option value="question">Question</option>
                 <option value="issue">Report an Issue</option>
                 <option value="other">Other</option>
             </select>
-        
+    
             <label for="message">Message:</label>
             <textarea id="message" name="message" placeholder="Enter your message here..." rows="5" required></textarea>
-        
+    
             <button type="submit" class="cta-btn1">Send</button>
         </form>
     </section>
-    
-    
-
+        
 
     <!-- Footer -->
     <footer class="footer">
@@ -151,4 +126,69 @@
     </footer>
 
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver(
+            (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                observer.unobserve(entry.target);
+                }
+            });
+            },
+            {
+            threshold: 0.2,
+            }
+        );
+
+        const fadeElements = document.querySelectorAll(".fade-in, .delayed-slide-in");
+        fadeElements.forEach(el => observer.observe(el));
+
+        const sections = document.querySelectorAll('.section');
+
+        const sectionsObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const section = entry.target;
+                        const hr = section.querySelector('.animated-hr');
+                        const paragraph = section.querySelector('p');
+
+                        section.classList.add('visible');
+
+                        setTimeout(() => {
+                            hr.classList.add("visible");
+
+                            setTimeout(() => {
+                                if (paragraph) paragraph.classList.add("visible");
+                            }, 600);
+                        }, 600);
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        sections.forEach((section) => sectionsObserver.observe(section));
+
+        const features = document.querySelectorAll('.flip-card');
+        const featuresObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        const featureCard = entry.target;
+
+                        setTimeout(() => {
+                            featureCard.classList.add("visible");
+                        }, index * 300);
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        features.forEach((featureCard) => featuresObserver.observe(featureCard));
+    });
+</script>
 </html>
