@@ -378,44 +378,170 @@ body {
     font-size: 1em;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .hero {
+/* Responsiveness */
+@media (max-width: 1024px) {
+    body {
+        overflow-x: hidden; /* Usunięcie odstępu po prawej stronie */
+    }
+
+    .navbar {
         flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    .navbar .logo {
+        margin-bottom: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar .logo img {
+        max-height: 35px;
+        max-width: 140px;
+    }
+
+    .nav-links {
+        width: 100%; /* Ustawienie szerokości menu */
         text-align: center;
     }
 
-    .hero-content {
-        max-width: 100%;
+    .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
+
+    .hero-image img {
+        max-width: 80%;
+        margin: 0 auto;
     }
 
     .features-container {
         flex-direction: column;
+        gap: 20px;
     }
 
     .feature-box {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .flip-card-container {
+        flex-direction: column;
+        gap: 15px;
+        height: auto;
+    }
+
+    .flip-card {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-form {
         width: 90%;
     }
 }
 
+@media (max-width: 480px) {
+    body {
+        overflow-x: hidden; /* Usunięcie odstępu po prawej stronie */
+    }
+
+    .navbar {
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navbar .logo img {
+        max-height: 30px;
+        max-width: 100px;
+        margin-bottom: 10px;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .nav-links ul li {
+        margin-right: 0; /* Usunięcie odstępów między elementami menu */
+    }
+
+    .nav-links ul li a {
+        font-size: 1em;
+        padding: 5px 10px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .cta-btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .flip-card {
+        margin: 0 auto; /* Wycentrowanie flip cards */
+    }
+
+    .flip-card:hover {
+        height: auto; /* Dopasowanie wysokości na małych ekranach */
+    }
+
+    .flip-card .description {
+        font-size: 0.8em;
+    }
+
+    .footer {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+}
+/* Animacje */
 .fade-in,
 .delayed-slide-in {
-  opacity: 0;
-  transform: translateX(-30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+    opacity: 0;
+    transform: translateY(110px); /* Większy odstęp na start */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* Dłuższy czas animacji */
 }
 
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+.fade-in.show,
 .delayed-slide-in.show {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.8s;
+    opacity: 1;
+    transform: translateY(0);
 }
 
+/* Opcjonalnie, dla delayed-slide-in, jeśli chcesz opóźnić animację */
+.delayed-slide-in.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.8s; /* Opóźnienie */
+}
+
+/* Animacja dla obrazka */
 .hero-image img.fade-in {
     opacity: 0;
     transform: none; 
@@ -425,4 +551,9 @@ body {
 .hero-image img.fade-in.show {
     opacity: 1;
     transform: none;
+}
+
+/* Przycisk SEE PRONE OFFER */
+.hero .cta-btn {
+    margin-top: 60px; /* Większy odstęp, by uniknąć nakładania animacji na przycisk */
 }
